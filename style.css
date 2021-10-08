@@ -10,12 +10,13 @@
 body{
     width: 100%;
     box-sizing: border-box;
+    background-color:#F0EFED ;
 
 }
 
 header{
     width: 100%;
-    height: 70vh;
+    height: 69vh;
     background-image: url(./asset\ 1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
@@ -24,6 +25,8 @@ header{
 }
 
 nav{
+    position: sticky;
+    top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,31 +99,30 @@ a:hover{
 }
 
 .left-nav img, .bag{
-    filter: invert(89%) sepia(3%) saturate(5547%) hue-rotate(317deg) brightness(94%) contrast(88%);
+    filter: invert(87%) sepia(8%) saturate(1795%) hue-rotate(316deg) brightness(98%) contrast(90%);
 
 
 }
 
 .item6{
-    filter: invert(89%) sepia(3%) saturate(5547%) hue-rotate(317deg) brightness(94%) contrast(88%);
+    filter: invert(87%) sepia(8%) saturate(1795%) hue-rotate(316deg) brightness(98%) contrast(90%);
 
 
 }
 
-.h-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr .7fr 1fr ;
-    grid-template-rows: 110px 110px 110px ;
+.empty-container{
+    width: 30vw;
 }
 
-.fa-caret-down{
-    grid-area: 3/5;
+.h-container{;
+    width: 100%;
+    height: 48vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#1A2456;
 }
 
-.h-sub-container {
-    grid-area: 2/3/4/5;
-    color: #1A2456;
-}
 
 .h-sub-container h1{
     font-size: 37.5px;
@@ -135,31 +137,33 @@ a:hover{
     letter-spacing: normal;
     font-weight: 300;
     margin-top: 15px;
+ 
 }
 
 .menu-line1{
     width: 25px;
     height: 3px;
-    background-color: thistle;
+    background-color: #EFC2B3;
     margin-bottom: 5px;
     transition: 1.5s;
-
+  
 }
 
 .menu-line2{
     width: 25px;
     height: 3px;
-    background-color: thistle;
+    background-color:#EFC2B3;
     margin-bottom: 5px;  
     transition: 1.5s;
-    
+   
 }
 
 .menu-line3{
     width: 25px;
     height: 3px;
-    background-color: thistle;
+    background-color: #EFC2B3;
     transition: 1.5s;
+ 
 }
 
 input{
@@ -169,9 +173,10 @@ input{
 
 label{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 90px;
+    z-index: 10;
 }
 
 
@@ -186,8 +191,7 @@ label{
         }
 
      input:checked~label .menu-line1{
-         background-color: brown;
-         
+         background-color: brown;  
         transform: translatey(18px);
 
      }
@@ -244,11 +248,128 @@ label{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(255, 255, 255, 0.63);
-        border-radius: 10px;
+        
         
     }
 
+    .h-sub-container{
+        background-color: rgba(255, 255, 255, 0.603);
+        border-radius: 10px;
+        padding: 10px;
+    
+    
+
+    }
+
+    .empty-container{
+        display: none;
+        
+    }
+
+}
+
+
+/* ++++++++++section ++++++++++++*/
+ section{
+     padding: 2.5vw 5vw;
+     margin: auto;
+     width: 70vw;
+     display: flex;
+     flex-direction: column;
+     font-weight: 300;
+     font-size: 13.5px;
+     line-height: 20.25px;
+     letter-spacing: normal;
+
+ }
+
+h1{
+     font-size: 18.75px;
+     line-height: 22.5px;
+     letter-spacing: 1.5px;
+     font-weight: 600;
+ }
+
+ h3{
+    font-size: 15px;
+    line-height: 22.5px;
+    letter-spacing: normal;
+    font-weight: 300;
+ }
+
+ .top-section{
+     display: flex;
+ }
+
+ .image{
+     width: 29.5vw;
+     height: 35.73vh;
+     background-position: center;
+     background-size: cover;
+     background-image: url(./assets/Packaging_TravelerClosedBracket1_Monogram_May20204517_d3899632-1a43-425f-a16a-1d5b968810c7.jpg);
+ }
+
+ .image2{
+
+    width: 29.5vw;
+    height: 35.73vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./assets/Packaging_StudioClosedBracket1_Monogram_May20204507_548446cb-17c9-4fc2-8b12-ae1b1a308a7e.jpg);
+
+ }
+
+ .image3{
+
+    width: 60vw;
+    height: 45vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./assets/Packaging_MasterClosedBracket1_Monogram_May20204494.jpg);
+
+ }
+
+
+
+
+ /* section img{
+     width: 30vw;
+     height: 35vh;  
+ } */
+
+ /* .bottom-section img{
+     height: 55vh;
+ } */
+
+ .sub-l-s{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    
+ }
+
+ .left-section{
+     padding-right: .5vw;
+     padding-bottom: 2vh;
+ }
+
+ .right-section{
+    padding-left: .5vw;
+}
+
+section .top-section .left-section .image:hover{
+    background-image: url(./assets/Consoles_TravelerBracket1_Monogram_May2020_4561_30a35bd4-01b4-44db-894a-e06162d8ab77.jpg);
+   background-size: cover;    
+}
+
+section .top-section .right-section .image2:hover{
+    background-image: url(./assets/Consoles_StudioBracket1_Monogram_May2020_4558_53685b21-b09f-45b0-85a2-180d6acfafac.jpg);
+   background-size: cover;    
+}
+
+section .bottom-section .image3:hover{
+    background-image: url(./assets/Consoles_MasterBracket1_Monogram_May2020_4555.jpg);
+   background-size: cover;    
 }
 
 
