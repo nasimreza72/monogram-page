@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Prompt', sans-serif; 
+    scroll-behavior: smooth;
 
 }
 body{
@@ -33,6 +34,7 @@ nav{
     background-color: #1A2456;
     padding: .3rem;
     box-sizing: border-box;
+    z-index: 9;
 
 }
 
@@ -118,6 +120,8 @@ a:hover{
     width: 100%;
     height: 48vh;
     display: flex;
+    position: relative;
+    top: 11vh;
     justify-content: center;
     align-items: center;
     color:#1A2456;
@@ -162,7 +166,7 @@ a:hover{
     width: 25px;
     height: 3px;
     background-color: #EFC2B3;
-    transition: 1.5s;
+    transition:1.5s;
  
 }
 
@@ -191,19 +195,22 @@ label{
         }
 
      input:checked~label .menu-line1{
-         background-color: brown;  
-        transform: translatey(18px);
+        transform: translatey(15px);
+        background-color: #E6AA25;  
+
 
      }
 
      input:checked~label .menu-line2{
-        background-color: rgb(165, 157, 42);
-        transform: rotate(360deg);
+        transform: rotate(180deg);
+        background-color: #ffffff;
+
+
     }
 
     input:checked~label .menu-line3{
-        background-color: rgb(77, 165, 42);
-        transform: translatey(-18px);
+        background-color: #F26039;
+        transform: translatey(-15px);
 
     }
 
@@ -224,6 +231,7 @@ label{
      padding: 2vh;
      border-radius: 5px;
      height: 29vh;
+     z-index: 10;
 
 
 }
@@ -242,6 +250,7 @@ label{
 
 .fa-caret-down{
     font-size: 4rem;
+    color: #1A2456;
     transition: 1s ease-in-out;
     text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
                  10px 20px 5px rgba(0, 0, 0, 0.596),
@@ -260,17 +269,13 @@ label{
     .h-container{
         display: flex;
         justify-content: center;
-        align-items: center;
-        
-        
+        align-items: center;    
     }
 
     .h-sub-container{
-        background-color: rgba(255, 255, 255, 0.603);
+        background-color: rgba(255, 255, 255, 0.267);
         border-radius: 10px;
         padding: 10px;
-    
-    
 
     }
 
@@ -384,6 +389,44 @@ section .bottom-section .image3:hover{
     background-image: url(./assets/Consoles_MasterBracket1_Monogram_May2020_4555.jpg);
    background-size: cover;    
 }
+
+section .top-section .right-section:hover .item2 .sub-l-s h2{
+opacity: 1;
+}
+
+section .top-section .left-section:hover .item2 .sub-l-s h2{
+    opacity: 1;
+    }
+    
+    section .bottom-section:hover .item2 .sub-l-s h2{
+        opacity: 1;
+        }
+        
+    
+
+/* +++++++SHOP NOW++++++++++++ */
+
+.sub-l-s h2{
+    font-weight: 500;
+    font-size: 11.25px;
+    background-color: #1A2456;
+    color:white;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 50px;
+    position: absolute;
+    top: 2px;
+    right: -3px;
+    opacity: 0;
+
+
+}
+
+
+.item2 .sub-l-s{
+    position: relative;
+}
+
 
 
 
